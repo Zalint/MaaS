@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MATA as a Service - Votre boucherie clé-en-main au Sénégal">
+    <title>MaaS - MATA as a Service | Waitlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="assets/logo-mata.png" alt="MATA Logo" class="logo">
+                    <h1 class="site-title">MATA as a Service</h1>
+                </div>
+                <div class="header-right">
+                    <a href="/admin" class="admin-link">🔐 Admin</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Countdown en haut à droite -->
+            <div class="hero-countdown-top">
+                <div class="countdown-compact">
+                    <div class="countdown-timer-inline" id="countdown-timer">
+                        <div class="countdown-item-inline">
+                            <span class="countdown-value" id="days">30</span>
+                            <span class="countdown-label">j</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item-inline">
+                            <span class="countdown-value" id="hours">05</span>
+                            <span class="countdown-label">h</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item-inline">
+                            <span class="countdown-value" id="minutes">24</span>
+                            <span class="countdown-label">m</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-item-inline">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-visual">
+                    <img src="assets/maas-visual.png" alt="MaaS - Votre boucherie clé-en-main" class="hero-image">
+                </div>
+                <div class="hero-text">
+                    <h2 class="hero-title">🎩 Votre boucherie clé-en-main</h2>
+                    <p class="hero-subtitle">
+                        La solution complète pour entrepreneurs et investisseurs qui veulent se lancer dans la boucherie au Sénégal
+                    </p>
+                    <a href="#waitlist" class="cta-button">Rejoindre la liste d'attente ↓</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pitch Section -->
+    <section class="pitch">
+        <div class="container">
+            <h3 class="pitch-title">Pourquoi MaaS ?</h3>
+            <div class="pitch-grid">
+                <div class="pitch-card">
+                    <div class="pitch-icon">📦</div>
+                    <h4>Volumes garantis</h4>
+                    <p>Approvisionnement stable et prévisible pour votre activité</p>
+                </div>
+                <div class="pitch-card">
+                    <div class="pitch-icon">💎</div>
+                    <h4>Transparence totale</h4>
+                    <p>Prix clairs, qualité contrôlée, traçabilité complète</p>
+                </div>
+                <div class="pitch-card">
+                    <div class="pitch-icon">🚚</div>
+                    <h4>Logistique incluse</h4>
+                    <p>De la source à votre boutique, on s'occupe de tout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section class="waitlist" id="waitlist">
+        <div class="container">
+            <div class="waitlist-box">
+                <h3 class="waitlist-title">🎯 Rejoignez la waitlist</h3>
+                <p class="waitlist-subtitle">
+                    Accès limité aux 20 premiers inscrits. Manifestez votre intérêt dès maintenant.
+                </p>
+
+                <!-- Formulaire -->
+                <form id="waitlist-form" class="form">
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="prenom">Prénom <span class="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="prenom" 
+                            name="prenom" 
+                            required 
+                            maxlength="100"
+                            placeholder="Saliou"
+                        >
+                        <span class="error-message" id="error-prenom"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Nom <span class="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="nom" 
+                            name="nom" 
+                            required 
+                            maxlength="100"
+                            placeholder="Seck"
+                        >
+                        <span class="error-message" id="error-nom"></span>
+                    </div>
+                    </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="saliou.seck@example.com"
+                    >
+                    <span class="error-message" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn (optionnel)</label>
+                    <input 
+                        type="url" 
+                        id="linkedin" 
+                        name="linkedin"
+                        placeholder="https://linkedin.com/in/saliou-seck"
+                    >
+                    <span class="error-message" id="error-linkedin"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="commentaire">Commentaire (optionnel)</label>
+                    <textarea 
+                        id="commentaire" 
+                        name="commentaire" 
+                        rows="4"
+                        maxlength="500"
+                        placeholder="Ex: Diaspora à Paris, je cherche à ouvrir une boucherie à Dakar..."
+                    ></textarea>
+                    <span class="char-count"><span id="char-count">0</span>/500</span>
+                    <span class="error-message" id="error-commentaire"></span>
+                </div>
+
+                    <p class="privacy-note">
+                        🔒 Vos données restent confidentielles et ne seront jamais partagées
+                    </p>
+
+                    <button type="submit" id="submit-btn" class="submit-button">
+                        S'inscrire
+                    </button>
+
+                    <div class="form-error" id="form-error"></div>
+                </form>
+
+                <!-- Message de confirmation (caché par défaut) -->
+                <div id="confirmation" class="confirmation" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Merci d'avoir manifesté un intérêt pour MaaS</h3>
+                    <p>On vous revient dans les plus brefs délais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; MATA 2026 - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,576 @@
+/* ============================================
+   VARIABLES & RESET
+   ============================================ */
+
+:root {
+    --primary-color: #c41e3a;
+    --primary-dark: #a01729;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --success-color: #27ae60;
+    --error-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    background: var(--white);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.admin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-visual {
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ============================================
+   COUNTDOWN TOP RIGHT
+   ============================================ */
+
+.hero-countdown-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.countdown-compact {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.countdown-text {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.countdown-timer-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-item-inline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.countdown-item-inline .countdown-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    font-family: 'Courier New', monospace;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-item-inline .countdown-label {
+    font-size: 0.85rem;
+    color: var(--white);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.countdown-sep {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+    opacity: 0.7;
+    margin: 0 2px;
+}
+
+.countdown-expired {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 25px;
+}
+
+@media (max-width: 768px) {
+    .hero-countdown-top {
+        justify-content: center;
+    }
+
+    .countdown-compact {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .countdown-text {
+        font-size: 0.9rem;
+    }
+
+    .countdown-item-inline .countdown-value {
+        font-size: 1.5rem;
+    }
+
+    .countdown-sep {
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================================
+   PITCH SECTION
+   ============================================ */
+
+.pitch {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.pitch-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+}
+
+.pitch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pitch-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pitch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.pitch-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.pitch-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.pitch-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ============================================
+   WAITLIST SECTION
+   ============================================ */
+
+.waitlist {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.waitlist-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-hover);
+}
+
+.waitlist-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.waitlist-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.required {
+    color: var(--error-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+.form-group input.valid {
+    border-color: var(--success-color);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.char-count {
+    position: absolute;
+    right: 10px;
+    bottom: -25px;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.privacy-note {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.submit-button:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.form-error {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fee;
+    border: 1px solid var(--error-color);
+    border-radius: 8px;
+    color: var(--error-color);
+    text-align: center;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+/* ============================================
+   CONFIRMATION
+   ============================================ */
+
+.confirmation {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success-color);
+    color: var(--white);
+    font-size: 3rem;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.confirmation h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.confirmation p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 85%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .pitch-title {
+        font-size: 1.6rem;
+    }
+
+    .waitlist-box {
+        padding: 30px 20px;
+    }
+
+    .waitlist-title {
+        font-size: 1.6rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .site-title {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .pitch {
+        padding: 40px 0;
+    }
+
+    .waitlist {
+        padding: 40px 0;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+

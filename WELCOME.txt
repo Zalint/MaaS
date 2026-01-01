@@ -1,0 +1,151 @@
+
+  __  __               ____    __        __     _  _    _     _     _        _   
+ |  \/  |             / ___|   \ \      / /    (_)| |_ | |   (_)   | |      | |  
+ | |\/| |  __ _  __ _\___ \    \ \ /\ / /_ _  | || __|| |    _  __| |_     | |  
+ | |  | | / _` |/ _` |___) |    \ V  V /| | | | || |_ | |   | |/ _| __|    | |  
+ |_|  |_| \__,_|\__,_|____/      \_/\_/ |_| |_|_| \__||_|   |_|\__|\__|    |_|  
+                                                                                  
+================================================================================
+                    MATA as a Service - Waitlist Platform
+================================================================================
+
+🎯 Bienvenue dans votre application MaaS Waitlist !
+
+Cette application vous permet de :
+  ✅ Collecter des pré-inscriptions via un formulaire élégant
+  ✅ Stocker les données dans Google Sheets (gratuit, simple)
+  ✅ Gérer les inscrits via une interface admin sécurisée
+  ✅ Exporter les données en CSV pour vos campagnes
+
+================================================================================
+                              🚀 DÉMARRAGE RAPIDE
+================================================================================
+
+1️⃣  Installation
+   Windows : double-cliquez sur install.bat
+   Mac/Linux : bash install.sh
+   Ou manuellement : npm install
+
+2️⃣  Configuration
+   - Créez votre Google Sheet avec 7 colonnes (voir SETUP.md)
+   - Créez un Service Account Google Cloud
+   - Générez un token admin : npm run generate-token
+   - Remplissez le fichier .env
+
+3️⃣  Test de configuration
+   npm run test-env
+   (Doit afficher "✅ CONFIGURATION VALIDE")
+
+4️⃣  Lancement
+   npm start
+   Puis ouvrez : http://localhost:3000
+
+5️⃣  Page Admin
+   http://localhost:3000/admin/VOTRE_TOKEN
+
+================================================================================
+                              📚 DOCUMENTATION
+================================================================================
+
+Nouveau ?             → QUICKSTART.md (5 minutes)
+Configuration ?       → SETUP.md (guide complet)
+Documentation ?       → README.md (tout savoir)
+API technique ?       → API.md (routes, formats)
+Résumé du projet ?    → PROJECT_SUMMARY.md
+
+================================================================================
+                              🔧 COMMANDES UTILES
+================================================================================
+
+npm start              Démarre le serveur (production)
+npm run dev            Démarre avec auto-reload (développement)
+npm run generate-token Génère un token admin sécurisé
+npm run test-env       Teste votre configuration
+
+================================================================================
+                              🎨 FONCTIONNALITÉS
+================================================================================
+
+Landing Page :
+  • Design moderne responsive (mobile + desktop)
+  • Formulaire 5 champs (3 obligatoires, 2 optionnels)
+  • Validation en temps réel
+  • Message de confirmation élégant
+  • Protection contre les double-clics
+
+Interface Admin :
+  • Authentification par token sécurisé
+  • Tableau complet des inscrits
+  • Compteur en temps réel
+  • Export CSV (compatible Excel)
+  • Auto-refresh toutes les 30 secondes
+
+Backend :
+  • Google Sheets API avec retry automatique (3x)
+  • Validation côté serveur
+  • Capture d'IP client
+  • Logging complet des erreurs
+  • Prêt pour Render (gratuit)
+
+================================================================================
+                              🔐 SÉCURITÉ
+================================================================================
+
+✅ Token admin 64 caractères hexadécimaux
+✅ Validation email + LinkedIn (regex)
+✅ Protection CORS
+✅ Pas de données sensibles dans le code
+✅ Credentials encodés en base64
+✅ Google Service Account avec accès limité
+
+================================================================================
+                              🌐 DÉPLOIEMENT
+================================================================================
+
+Render.com (recommandé, gratuit) :
+  1. Push votre code sur GitHub/GitLab
+  2. Créez un Web Service sur render.com
+  3. Configurez les variables d'environnement
+  4. Déployez en 1 clic !
+  
+Détails complets dans README.md section "Déploiement sur Render"
+
+================================================================================
+                              📊 OBJECTIF
+================================================================================
+
+🎯 Collecter 20 pré-inscriptions qualifiées
+🎯 Valider l'intérêt du marché pour MaaS
+🎯 Constituer une base de prospects pour le lancement
+
+================================================================================
+                              💡 BESOIN D'AIDE ?
+================================================================================
+
+Problème de configuration ?    → Consultez SETUP.md section "Résolution"
+Erreur au démarrage ?          → Lancez npm run test-env
+Questions sur l'API ?          → Consultez API.md
+Problème Google Sheets ?       → Vérifiez les permissions Service Account
+
+================================================================================
+                              🎉 C'EST PARTI !
+================================================================================
+
+Votre application est prête à conquérir le marché sénégalais ! 🇸🇳
+
+Développée avec ❤️ pour la diaspora et les entrepreneurs locaux.
+
+                          © MATA 2026 - Tous droits réservés
+
+================================================================================
+
+Pour démarrer maintenant :
+  1. npm install
+  2. Configurez .env (voir SETUP.md)
+  3. npm run test-env
+  4. npm start
+  5. Ouvrez http://localhost:3000
+
+Bon courage ! 🚀
+
+
