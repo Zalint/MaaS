@@ -25,9 +25,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === 'production',
+    secure: 'auto', // Auto-détection : HTTPS en production, HTTP en local
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 24 heures
+    maxAge: 24 * 60 * 60 * 1000, // 24 heures
+    sameSite: 'lax' // Protection CSRF tout en permettant les cookies cross-origin
   },
   // Note: En production, utilisez un store comme connect-pg-simple pour PostgreSQL
   // Pour le MVP, MemoryStore est acceptable avec une seule instance Render
