@@ -28,7 +28,9 @@ app.use(session({
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000 // 24 heures
-  }
+  },
+  // Note: En production, utilisez un store comme connect-pg-simple pour PostgreSQL
+  // Pour le MVP, MemoryStore est acceptable avec une seule instance Render
 }));
 
 app.use(express.static('public'));
