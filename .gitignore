@@ -16,6 +16,9 @@ yarn-error.log*
 credentials.json
 *.json.backup
 
+# Migration scripts with credentials
+migrate-prod.js
+
 # Logs
 logs/
 *.log
