@@ -270,6 +270,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 prenom: document.getElementById('prenom').value.trim(),
                 nom: document.getElementById('nom').value.trim(),
                 email: document.getElementById('email').value.trim(),
+                whatsapp: document.getElementById('whatsapp').value.trim(),
+                profil: document.getElementById('profil').value.trim(),
+                zone: document.getElementById('zone').value.trim(),
                 linkedin: document.getElementById('linkedin').value.trim(),
                 commentaire: document.getElementById('commentaire').value.trim()
             };

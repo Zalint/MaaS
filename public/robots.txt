@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin
+Disallow: /api/admin/
+
+# Allow public pages
+Allow: /
+Allow: /assets/
+
+Sitemap: https://votre-domaine.com/sitemap.xml
+

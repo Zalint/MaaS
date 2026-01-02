@@ -16,9 +16,6 @@
                     <img src="assets/logo-mata.png" alt="MATA Logo" class="logo">
                     <h1 class="site-title">MATA as a Service</h1>
                 </div>
-                <div class="header-right">
-                    <a href="/admin" class="admin-link">🔐 Admin</a>
-                </div>
             </div>
         </div>
     </header>
@@ -92,6 +89,89 @@
         </div>
     </section>
 
+    <!-- Ce qui est inclus Section -->
+    <section class="included-section">
+        <div class="container">
+            <h3 class="section-title">🎯 Ce qui est inclus dans votre offre clé-en-main</h3>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Stock initial</h4>
+                        <p>Approvisionnement de démarrage pour votre boutique</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Équipement frigorifique</h4>
+                        <p>Cold room et matériel de conservation adapté</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Livraisons régulières</h4>
+                        <p>Réapprovisionnement programmé selon vos besoins</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Formation & support</h4>
+                        <p>Accompagnement opérationnel et commercial</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Contrôle qualité</h4>
+                        <p>Standards MATA garantis sur tous les produits</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">✅</div>
+                    <div class="included-content">
+                        <h4>Gestion data & stocks</h4>
+                        <p>Outils de suivi et d'optimisation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h3 class="section-title">📋 Comment ça marche ?</h3>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Inscription & Qualification</h4>
+                        <p>Remplissez le formulaire pour rejoindre la liste d'attente. Nous étudions votre profil et votre projet.</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Entretien & Validation</h4>
+                        <p>Échange avec notre équipe pour valider l'adéquation du projet et définir vos besoins spécifiques.</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Lancement & Accompagnement</h4>
+                        <p>Installation, formation et démarrage avec un suivi rapproché les premières semaines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Waitlist Form Section -->
     <section class="waitlist" id="waitlist">
         <div class="container">
@@ -104,68 +184,127 @@
                 <!-- Formulaire -->
                 <form id="waitlist-form" class="form">
                     <div class="form-row">
-                    <div class="form-group">
-                        <label for="prenom">Prénom <span class="required">*</span></label>
-                        <input 
-                            type="text" 
-                            id="prenom" 
-                            name="prenom" 
-                            required 
-                            maxlength="100"
-                            placeholder="Saliou"
-                        >
-                        <span class="error-message" id="error-prenom"></span>
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="prenom" 
+                                name="prenom" 
+                                required 
+                                maxlength="100"
+                                placeholder="Saliou"
+                            >
+                            <span class="error-message" id="error-prenom"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="nom" 
+                                name="nom" 
+                                required 
+                                maxlength="100"
+                                placeholder="Seck"
+                            >
+                            <span class="error-message" id="error-nom"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                placeholder="saliou.seck@example.com"
+                            >
+                            <span class="error-message" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp <span class="required">*</span></label>
+                            <input 
+                                type="tel" 
+                                id="whatsapp" 
+                                name="whatsapp" 
+                                required
+                                placeholder="+221 77 123 45 67"
+                            >
+                            <span class="error-message" id="error-whatsapp"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profil">Votre profil <span class="required">*</span></label>
+                            <select 
+                                id="profil" 
+                                name="profil" 
+                                required
+                            >
+                                <option value="">Sélectionnez votre profil</option>
+                                <option value="entrepreneur">Entrepreneur</option>
+                                <option value="investisseur">Investisseur</option>
+                                <option value="proprietaire">Propriétaire de boutique</option>
+                                <option value="diaspora">Diaspora</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span class="error-message" id="error-profil"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zone">Zone cible <span class="required">*</span></label>
+                            <select 
+                                id="zone" 
+                                name="zone" 
+                                required
+                            >
+                                <option value="">Sélectionnez une zone</option>
+                                <option value="dakar">Dakar</option>
+                                <option value="thies">Thiès</option>
+                                <option value="saint-louis">Saint-Louis</option>
+                                <option value="kaolack">Kaolack</option>
+                                <option value="ziguinchor">Ziguinchor</option>
+                                <option value="autre">Autre région</option>
+                            </select>
+                            <span class="error-message" id="error-zone"></span>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="nom">Nom <span class="required">*</span></label>
+                        <label for="linkedin">LinkedIn (optionnel)</label>
                         <input 
-                            type="text" 
-                            id="nom" 
-                            name="nom" 
-                            required 
-                            maxlength="100"
-                            placeholder="Seck"
+                            type="url" 
+                            id="linkedin" 
+                            name="linkedin"
+                            placeholder="https://linkedin.com/in/saliou-seck"
                         >
-                        <span class="error-message" id="error-nom"></span>
+                        <span class="error-message" id="error-linkedin"></span>
                     </div>
+
+                    <div class="form-group">
+                        <label for="commentaire">Commentaire (optionnel)</label>
+                        <textarea 
+                            id="commentaire" 
+                            name="commentaire" 
+                            rows="4"
+                            maxlength="500"
+                            placeholder="Ex: Diaspora à Paris, je cherche à ouvrir une boucherie à Dakar..."
+                        ></textarea>
+                        <span class="char-count"><span id="char-count">0</span>/500</span>
+                        <span class="error-message" id="error-commentaire"></span>
                     </div>
 
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        required
-                        placeholder="saliou.seck@example.com"
-                    >
-                    <span class="error-message" id="error-email"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="linkedin">LinkedIn (optionnel)</label>
-                    <input 
-                        type="url" 
-                        id="linkedin" 
-                        name="linkedin"
-                        placeholder="https://linkedin.com/in/saliou-seck"
-                    >
-                    <span class="error-message" id="error-linkedin"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="commentaire">Commentaire (optionnel)</label>
-                    <textarea 
-                        id="commentaire" 
-                        name="commentaire" 
-                        rows="4"
-                        maxlength="500"
-                        placeholder="Ex: Diaspora à Paris, je cherche à ouvrir une boucherie à Dakar..."
-                    ></textarea>
-                    <span class="char-count"><span id="char-count">0</span>/500</span>
-                    <span class="error-message" id="error-commentaire"></span>
-                </div>
+                    <div class="form-consent">
+                        <label class="consent-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>J'accepte d'être contacté par WhatsApp et email pour le suivi de ma candidature. <a href="/privacy" target="_blank">Politique de confidentialité</a></span>
+                        </label>
+                        <span class="error-message" id="error-consent"></span>
+                    </div>
 
                     <p class="privacy-note">
                         🔒 Vos données restent confidentielles et ne seront jamais partagées

@@ -60,10 +60,10 @@ app.get('/', (req, res) => {
  */
 app.post('/api/submit', async (req, res) => {
   try {
-    const { prenom, nom, email, linkedin, commentaire } = req.body;
+    const { prenom, nom, email, whatsapp, profil, zone, linkedin, commentaire } = req.body;
 
     // Validation des données
-    const validation = validateFormData({ prenom, nom, email, linkedin, commentaire });
+    const validation = validateFormData({ prenom, nom, email, whatsapp, profil, zone, linkedin, commentaire });
     
     if (!validation.isValid) {
       return res.status(400).json({
@@ -78,6 +78,9 @@ app.post('/api/submit', async (req, res) => {
       prenom: prenom.trim(),
       nom: nom.trim(),
       email: email.trim(),
+      whatsapp: whatsapp.trim(),
+      profil: profil.trim(),
+      zone: zone.trim(),
       linkedin: linkedin?.trim() || '',
       commentaire: commentaire?.trim() || '',
       ip: getClientIp(req)
@@ -219,7 +222,7 @@ app.get('/api/admin/export', requireAuth, async (req, res) => {
     
     // Génération CSV avec BOM UTF-8 pour Excel
     const BOM = '\uFEFF';
-    let csv = BOM + 'Timestamp,Prénom,Nom,Email,LinkedIn,Commentaire,IP\n';
+    let csv = BOM + 'Timestamp,Prénom,Nom,Email,WhatsApp,Profil,Zone,LinkedIn,Commentaire,IP\n';
     
     data.forEach(row => {
       csv += [
@@ -227,6 +230,9 @@ app.get('/api/admin/export', requireAuth, async (req, res) => {
         escapeCSV(row.prenom),
         escapeCSV(row.nom),
         escapeCSV(row.email),
+        escapeCSV(row.whatsapp),
+        escapeCSV(row.profil),
+        escapeCSV(row.zone),
         escapeCSV(row.linkedin),
         escapeCSV(row.commentaire),
         escapeCSV(row.ip)

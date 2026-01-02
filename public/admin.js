@@ -217,6 +217,21 @@ function renderTable(data) {
         tdEmail.textContent = row.email || '-';
         tr.appendChild(tdEmail);
         
+        // WhatsApp
+        const tdWhatsApp = document.createElement('td');
+        tdWhatsApp.textContent = row.whatsapp || '-';
+        tr.appendChild(tdWhatsApp);
+        
+        // Profil
+        const tdProfil = document.createElement('td');
+        tdProfil.textContent = row.profil || '-';
+        tr.appendChild(tdProfil);
+        
+        // Zone
+        const tdZone = document.createElement('td');
+        tdZone.textContent = row.zone || '-';
+        tr.appendChild(tdZone);
+        
         // LinkedIn
         const tdLinkedIn = document.createElement('td');
         if (row.linkedin) {
