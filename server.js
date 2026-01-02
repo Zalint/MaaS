@@ -56,6 +56,13 @@ app.get('/', (req, res) => {
 });
 
 /**
+ * GET /privacy - Page de politique de confidentialité
+ */
+app.get('/privacy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
+});
+
+/**
  * POST /api/submit - Soumission formulaire waitlist
  */
 app.post('/api/submit', async (req, res) => {
